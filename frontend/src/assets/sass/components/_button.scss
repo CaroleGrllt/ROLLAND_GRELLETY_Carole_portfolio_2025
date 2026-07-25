@@ -1,0 +1,40 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins';
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: background-color .2s ease, transform .2s ease, border-color .2s ease, color .2s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+    }
+
+    &.is-active {
+        transform: translateY(0);
+    }
+
+    &.btn--header {
+        padding: 14px 17px;
+        color: v.$darkblue;
+        background-color: v.$lightblue;
+        border: 3px solid v.$lightblue;
+
+        &:hover {
+            background-color: v.$title;
+            border: 3px solid v.$title;
+            color: v.$lightblue;
+        }
+
+        &.is-active {
+            background-color: v.$title;
+            border: 3px solid v.$title;
+            color: v.$lightblue;
+        }
+    }
+}

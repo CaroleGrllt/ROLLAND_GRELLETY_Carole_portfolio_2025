@@ -1,0 +1,15 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins';
+
+footer {
+    background-color: v.$darkblue;
+
+    @include mixins.desktop-xl {
+        padding: 46px 0;
+    }
+
+    p {
+        color: v.$lightblue;
+        text-align: center;
+    }
+}

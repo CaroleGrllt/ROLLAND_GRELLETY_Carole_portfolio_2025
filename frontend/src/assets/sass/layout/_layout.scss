@@ -1,0 +1,9 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins';
+
+
+.layout-grid {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
