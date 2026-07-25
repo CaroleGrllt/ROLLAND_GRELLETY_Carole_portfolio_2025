@@ -4,9 +4,17 @@
 header {
     background-color: v.$darkblue;
 
-    // @include mixins.tablet-xl {
-    //     padding: 0 124px;
-    // }
+    @include mixins.tablet-xl {
+        padding: 0 20px;
+    }
+
+    @include mixins.laptop {
+        padding: 0 70px;
+    }
+
+    @include mixins.desktop {
+        padding: 0 120px;
+    }
 
     nav {
         display: flex;
@@ -15,7 +23,16 @@ header {
         position: relative; 
         width: 100%;
 
-        // Desktop menu
+        @include mixins.tablet-xl {
+            gap: 20px;
+        }
+
+        @include mixins.desktop {
+            gap: 40px;
+        }
+
+
+        // DESKTOP MENU
 
         ul.nav-links {
             display: none;
@@ -25,7 +42,11 @@ header {
                 list-style: none;
                 padding: 0;
                 margin: 0;
-                gap: 10px;
+                gap: 7px;
+
+                @include mixins.desktop {
+                    gap: 15px;
+                }
 
                 a {
                     color: v.$lightblue;
@@ -59,14 +80,11 @@ header {
         button.nav-toggle {
             position: relative;
             z-index: 70;
-
             display: inline-flex;
             align-items: center;
             justify-content: center;
-
             width: 48px;
             height: 48px;
-
             font-size: 2rem;
             line-height: 1;
             color: v.$lightblue;
@@ -152,29 +170,15 @@ header {
 
 // ===== Overlay mobile =====
         .mobile-overlay {
-            // display: none;
-            // border: none;
-            // padding: 0;
-            // background: transparent;
             position: fixed;
             inset: 0;
             z-index: 50;
-
             width: 100%;
             height: 100%;
-
             border: none;
             padding: 0;
             background: rgba(0, 0, 0, 0.45);
             cursor: pointer;
-            // &.is-open {
-            //     display: block;
-            //     position: fixed;
-            //     inset: 0;
-            //     z-index: 50;
-            //     background: rgba(0, 0, 0, 0.45);
-            //     cursor: pointer;
-            // }
 
             @include mixins.tablet-xl {
                 display: none;
