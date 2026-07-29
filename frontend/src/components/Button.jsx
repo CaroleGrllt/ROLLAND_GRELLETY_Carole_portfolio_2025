@@ -5,7 +5,7 @@ export default function Button({
   linkTo,
   external = false,
   variant = "header",
-  activeClassName = "is-active"
+  // activeClassName = "is-active"
 }) {
   const className = `btn btn--${variant}`
 
@@ -26,7 +26,7 @@ export default function Button({
     <NavLink
       to={linkTo}
       className={({ isActive }) =>
-        `${className} ${isActive ? activeClassName : ""}`
+        `${className} ${isActive ? 'is-active' : ""}`
       }
       end={linkTo === "/"}
     >

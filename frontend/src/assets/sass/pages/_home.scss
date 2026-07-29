@@ -1,0 +1,66 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins';
+
+.home-hero-section {
+    padding: 60px 20px 40px;
+
+    h1 {
+        color: v.$title;
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include mixins.tablet {
+            font-size: 2.5rem;
+        }
+
+        @include mixins.tablet-xl {
+            font-size: 3rem;
+        }
+
+        @include mixins.laptop {
+            font-size: 3.5rem;
+        }
+
+        @include mixins.desktop {
+            font-size: 4rem;
+        }
+
+        .br-display {
+            display: none;
+
+            @include mixins.tablet {
+                display: inline-block;
+            }
+        }
+    }
+
+    .home-cta-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+
+        @include mixins.tablet {
+            flex-direction: row;
+            gap: 30px;
+            margin: 0 150px;
+        }
+
+        @include mixins.tablet-xl {
+            margin: 0 210px;
+        }
+
+        @include mixins.laptop {
+            margin: 0 280px;
+        }
+
+        @include mixins.desktop {
+            margin: 0 340px;
+        }
+
+        @include mixins.desktop-xl {
+            margin: 0 400px;
+        }
+    }
+}

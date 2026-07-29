@@ -3,10 +3,8 @@
 
 footer {
     background-color: v.$darkblue;
-
-    @include mixins.desktop-xl {
-        padding: 46px 0;
-    }
+    padding: 35px;
+    line-height: 1.5;
 
     p {
         color: v.$lightblue;

@@ -37,4 +37,45 @@
             color: v.$lightblue;
         }
     }
+
+    &.btn--dark-button {
+        padding: 10px;
+        background-color: v.$txt;
+        border: 3px solid v.$txt;
+        color: v.$lightblue;
+        width: 50%;
+
+        @include mixins.tablet {
+            width: 100%;
+        }
+
+        @include mixins.laptop {
+            padding: 13px 10px;
+        }
+
+        &:hover {
+            background-color: v.$title;
+            border: 3px solid v.$title;
+            color: v.$lightblue;
+        }
+    }
+
+    &.btn--light-button {
+        padding: 10px;
+        border: 3px solid v.$txt;
+        color: v.$txt;
+        width: 50%;
+
+        @include mixins.tablet {
+            width: 100%;
+        }
+
+        @include mixins.laptop {
+            padding: 13px 10px;
+        }
+
+        &:hover {
+            background-color: rgba(v.$title, 0.2);
+        }
+    }
 }

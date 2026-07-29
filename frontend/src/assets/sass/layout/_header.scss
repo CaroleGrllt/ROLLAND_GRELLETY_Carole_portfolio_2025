@@ -16,6 +16,10 @@ header {
         padding: 0 120px;
     }
 
+    @include mixins.desktop-xl {
+        padding: 0 150px;
+    }
+
     nav {
         display: flex;
         align-items: center;
@@ -46,6 +50,10 @@ header {
 
                 @include mixins.desktop {
                     gap: 15px;
+                }
+
+                @include mixins.desktop {
+                    gap: 30px;
                 }
 
                 a {
