@@ -28,7 +28,7 @@ export default function Home() {
                     <div className="txt-container">
                         <div className="availability-content">
                             <div className="availability-content-point"></div>
-                            <p className="availability-content-txt"></p>
+                            <p className="availability-content-txt">A l'écoute de nouvelles opportunités</p>
                         </div>
                         <div className="presentation-content">
                             <p className="presentation-content-iam">Bienvenue ! Je suis...</p>

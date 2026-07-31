@@ -69,19 +69,121 @@
     background-color: v.$lightgrey;
 
     .introduction-container {
-        padding: 30px 50px;
+        padding: 40px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        @include mixins.tablet {
+            flex-direction: row;
+        }
+
+        @include mixins.tablet-xl {
+            gap: 50px;
+        }
+
+        @include mixins.laptop {
+            padding: 60px 85px;
+        }
+
+        @include mixins.desktop {
+            padding: 60px 140px;
+            gap: 70px;
+        }
+
+        @include mixins.desktop-xl {
+            padding: 60px 175px;
+        }
 
         .img-container {
             width: 200px;
             height: 200px;
+            flex-shrink: 0;
             border: 15px solid v.$txt;
-            border-radius: 20px;
+            border-radius: 10px;
+            overflow: hidden;
 
             img {
+                display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 5px;
+            }
+        }
+
+        .txt-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            @include mixins.tablet {
+                align-items: flex-start;
+                justify-content: space-between;
+                align-self: stretch;
+                gap: unset;
+            }
+
+            .availability-content {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 10px 12px;
+                gap: 8px;
+                background-color: v.$white;
+                border: 1px v.$green solid;
+                border-radius: 0 20px 0 20px;
+                box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1);
+
+                .availability-content-point {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 100%;
+                    background-color: v.$green;
+                }
+
+                p {
+                    color: v.$green;
+                }
+            }
+
+            .presentation-content {
+                text-align: center;
+
+                @include mixins.tablet {
+                    text-align: start;
+                }
+
+                p {
+                    color: v.$txt;
+
+                    &.presentation-content-iam {
+                        font-size: 20px;
+                        margin-bottom: 12px;
+
+                        @include mixins.desktop {
+                            font-size: 24px;
+                            margin-bottom: 8px;
+                        }
+                    }
+
+                    &.presentation-content-name {
+                        font-size: 24px;
+                        margin-bottom: 20px;
+                        font-weight: 700;
+
+                        @include mixins.desktop {
+                            font-size: 32px;
+                            margin-bottom: 15px;
+                        }
+
+                    }
+
+                    &.presentation-content-spe {
+                        line-height: 1.3;
+                    }
+                }
             }
         }
     }
