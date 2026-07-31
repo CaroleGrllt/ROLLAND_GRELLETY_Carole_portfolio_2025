@@ -1,4 +1,6 @@
 import Button from '../components/Button'
+import Profile from '../assets/img/profile.webp'
+
 
 export default function Home() {
     return(
@@ -20,20 +22,22 @@ export default function Home() {
             </section>
             <section className="home-introduction-section">
                 <div className="introduction-container">
-                    <div className="img-container"></div>
+                    <div className="img-container">
+                        <img src={Profile} alt="profil" />                     
+                    </div>
                     <div className="txt-container">
                         <div className="availability-content">
                             <div className="availability-content-point"></div>
-                            <div className="availability-content-txt"></div>
+                            <p className="availability-content-txt"></p>
                         </div>
                         <div className="presentation-content">
-                            <div className="presentation-content-iam">Bienvenue ! Je suis...</div>
-                            <div className="presentation-content-name">
+                            <p className="presentation-content-iam">Bienvenue ! Je suis...</p>
+                            <p className="presentation-content-name">
                                 Carole ROLLAND GRELLETY
-                            </div>
-                            <div className="presentation-content-spe">
+                            </p>
+                            <p className="presentation-content-spe">
                                 Spécialisée en développement front-end (JavaScript-React), mes compétences en back-end me permettent d’avoir une approche et une compréhension globales d’un projet et de développer des applications full-stack de bout en bout. 
-                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -64,3 +64,25 @@
         }
     }
 }
+
+.home-introduction-section {
+    background-color: v.$lightgrey;
+
+    .introduction-container {
+        padding: 30px 50px;
+
+        .img-container {
+            width: 200px;
+            height: 200px;
+            border: 15px solid v.$txt;
+            border-radius: 20px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+    }
+}
